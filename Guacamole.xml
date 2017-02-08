@@ -8,11 +8,22 @@
     [b]/config[/b] : this path is where Apache Guacamole will store it\'s properties files, extensions, and the database which contains data for users and connections.[br]
     Initial username and password are [b]guacadmin[/b]
   </Description>
-  <Registry>https://registry.hub.docker.com/u/jasonbean/guacamole/</Registry>
-  <Repository>jasonbean/guacamole</Repository>
+  <Registry>https://registry.hub.docker.com/u/jasonbean/guacamole-test/</Registry>
+  <Repository>jasonbean/guacamole-test</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Environment/>
+  <Environment>
+    <Variable>
+      <Name>Use LDAP Extension</Name>
+      <Key>OPT_LDAP</Key>
+      <Value>N</Value>
+    </Variable>
+    <Variable>
+      <Name>Use Duo Authentication Extension</Name>
+      <Key>OPT_DUO</Key>
+      <Value>N</Value>
+    </Variable>
+  </Environment>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
