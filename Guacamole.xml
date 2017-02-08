@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Container version="2">
+<Container>
   <Name>Apache Guacamole</Name>
   <Description>
     [h3]Apache Guacamole[/h3]Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC and RDP.[br][br]
@@ -24,8 +24,6 @@
       <Mode/>
     </Variable>
   </Environment>
-  <Config Name="Use LDAP Extension" Target="OPT_LDAP" Default="N" Mode="" Description="Container Variable: OPT_LDAP" Type="Variable" Display="always" Required="true" Mask="false">N</Config>
-  <Config Name="Use Duo Extension" Target="OPT_DUO" Default="N" Mode="" Description="Container Variable: OPT_DUO" Type="Variable" Display="always" Required="true" Mask="false">N</Config>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
