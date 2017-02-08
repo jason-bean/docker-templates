@@ -12,18 +12,9 @@
   <Repository>jasonbean/guacamole-test</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Environment>
-    <Variable>
-      <Name>Use LDAP Extension</Name>
-      <Key>OPT_LDAP</Key>
-      <Value>N</Value>
-    </Variable>
-    <Variable>
-      <Name>Use Duo Authentication Extension</Name>
-      <Key>OPT_DUO</Key>
-      <Value>N</Value>
-    </Variable>
-  </Environment>
+  <Environment/>
+  <Config Name="Use LDAP Extension" Target="OPT_LDAP" Default="N" Mode="" Description="Container Variable: OPT_LDAP" Type="Variable" Display="always" Required="true" Mask="false">N</Config>
+  <Config Name="Use Duo Extension" Target="OPT_DUO" Default="N" Mode="" Description="Container Variable: OPT_DUO" Type="Variable" Display="always" Required="true" Mask="false">N</Config>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
