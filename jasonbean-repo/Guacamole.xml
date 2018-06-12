@@ -11,7 +11,7 @@
   <Registry>https://registry.hub.docker.com/u/jasonbean/guacamole/</Registry>
   <Repository>jasonbean/guacamole</Repository>
   <BindTime>true</BindTime>
-  <Privileged>false</Privileged>
+  <Privileged>true</Privileged>
   <Environment>
     <Variable>
       <Name>OPT_MYSQL</Name>
