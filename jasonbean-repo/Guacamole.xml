@@ -1,54 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Container>
-  <Name>Apache Guacamole</Name>
-  <Description>
-    [h3]Apache Guacamole[/h3]Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC and RDP.[br][br]
-    [b][span style=\'color: #E80000;\']Directions:[/span][/b][br]
-    [b]Be sure to change the Host port from [span style=\'color: #E80000;\']8080[/span] to [span style=\'color: #E80000;\']something else[/span] as [span style=\'color: #E80000;\']8080[/span] is quite a common port.[/b][br][br]
-    [b]/config[/b] : this path is where Apache Guacamole will store it\'s properties files, extensions, and the database which contains data for users and connections.[br]
-    Initial username and password are [b]guacadmin[/b]
-  </Description>
-  <Registry>https://registry.hub.docker.com/u/jasonbean/guacamole/</Registry>
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ApacheGuacamole</Name>
   <Repository>jasonbean/guacamole</Repository>
-  <BindTime>true</BindTime>
+  <Registry>https://registry.hub.docker.com/u/jasonbean/guacamole/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
   <Privileged>true</Privileged>
-  <Environment>
-    <Variable>
-      <Name>OPT_MYSQL</Name>
-      <Value>Y</Value>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Name>OPT_SQLSERVER</Name>
-      <Value>N</Value>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Name>OPT_LDAP</Name>
-      <Value>N</Value>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Name>OPT_DUO</Name>
-      <Value>N</Value>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Name>OPT_CAS</Name>
-      <Value>N</Value>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Name>OPT_OPENID</Name>
-      <Value>N</Value>
-      <Mode/>
-    </Variable>
-  </Environment>
+  <Support>https://forums.unraid.net/topic/54855-support-jasonbean-apache-guacamole/</Support>
+  <Project>https://guacamole.apache.org/</Project>
+  <Overview>&#xD;
+    [h3]Apache Guacamole[/h3]Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC and RDP.[br][br]&#xD;
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]&#xD;
+    [b]Be sure to change the Host port from [span style='color: #E80000;']8080[/span] to [span style='color: #E80000;']something else[/span] as [span style='color: #E80000;']8080[/span] is quite a common port.[/b][br][br]&#xD;
+    [b]/config[/b] : this path is where Apache Guacamole will store it's properties files, extensions, and the database which contains data for users and connections.[br]&#xD;
+    Initial username and password are [b]guacadmin[/b]&#xD;
+  </Overview>
+  <Category>Network:Management Network:Other</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL/>
+  <Icon>http://i.imgur.com/eflpez4.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <DonateText>Donate To Author</DonateText>
+  <DonateLink>https://paypal.me/jasonsbean/0usd</DonateLink>
+  <Description>&#xD;
+    [h3]Apache Guacamole[/h3]Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC and RDP.[br][br]&#xD;
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]&#xD;
+    [b]Be sure to change the Host port from [span style='color: #E80000;']8080[/span] to [span style='color: #E80000;']something else[/span] as [span style='color: #E80000;']8080[/span] is quite a common port.[/b][br][br]&#xD;
+    [b]/config[/b] : this path is where Apache Guacamole will store it's properties files, extensions, and the database which contains data for users and connections.[br]&#xD;
+    Initial username and password are [b]guacadmin[/b]&#xD;
+  </Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>8080</HostPort>
+        <HostPort>8088</HostPort>
         <ContainerPort>8080</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -56,17 +42,38 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/Guacamole</HostDir>
+      <HostDir>/mnt/user/appdata/ApacheGuacamole</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <Version></Version>
-  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
-  <Banner>http://i.imgur.com/tZ5x8bc.png</Banner>
-  <Icon>http://i.imgur.com/eflpez4.png</Icon>
-  <Beta>False</Beta>
-  <Category>Network:Management Network:Other</Category>
-  <Date>2018-01-24</Date>
-  <Support>http://lime-technology.com/forum/index.php?topic=56614.0</Support>
-</Container>
+  <Environment>
+    <Variable>
+      <Value>Y</Value>
+      <Name>OPT_MYSQL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>N</Value>
+      <Name>OPT_LDAP</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>N</Value>
+      <Name>OPT_DUO</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>N</Value>
+      <Name>OPT_CAS</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Port 1" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Key 1" Target="OPT_MYSQL" Default="Y" Mode="" Description="Container Variable: OPT_MYSQL" Type="Variable" Display="always" Required="false" Mask="false">Y</Config>
+  <Config Name="Key 2" Target="OPT_LDAP" Default="N" Mode="" Description="Container Variable: OPT_LDAP" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
+  <Config Name="Key 3" Target="OPT_DUO" Default="N" Mode="" Description="Container Variable: OPT_DUO" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
+  <Config Name="Key 4" Target="OPT_CAS" Default="N" Mode="" Description="Container Variable: OPT_CAS" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/ApacheGuacamole" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ApacheGuacamole</Config>
+</Container
