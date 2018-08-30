@@ -76,4 +76,4 @@
   <Config Name="Key 3" Target="OPT_DUO" Default="N" Mode="" Description="Container Variable: OPT_DUO" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
   <Config Name="Key 4" Target="OPT_CAS" Default="N" Mode="" Description="Container Variable: OPT_CAS" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
   <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/ApacheGuacamole" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ApacheGuacamole</Config>
-</Container
+</Container>
