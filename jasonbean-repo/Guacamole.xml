@@ -55,6 +55,11 @@
     </Variable>
     <Variable>
       <Value>N</Value>
+      <Name>OPT_SQLSERVER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>N</Value>
       <Name>OPT_LDAP</Name>
       <Mode/>
     </Variable>
