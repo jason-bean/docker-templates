@@ -77,8 +77,9 @@
   <Labels/>
   <Config Name="Host Port 1" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="Key 1" Target="OPT_MYSQL" Default="Y" Mode="" Description="Container Variable: OPT_MYSQL" Type="Variable" Display="always" Required="false" Mask="false">Y</Config>
-  <Config Name="Key 2" Target="OPT_LDAP" Default="N" Mode="" Description="Container Variable: OPT_LDAP" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
-  <Config Name="Key 3" Target="OPT_DUO" Default="N" Mode="" Description="Container Variable: OPT_DUO" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
-  <Config Name="Key 4" Target="OPT_CAS" Default="N" Mode="" Description="Container Variable: OPT_CAS" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
+  <Config Name="Key 2" Target="OPT_SQLSERVER" Default="N" Mode="" Description="Container Variable: OPT_SQLSERVER" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
+  <Config Name="Key 3" Target="OPT_LDAP" Default="N" Mode="" Description="Container Variable: OPT_LDAP" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
+  <Config Name="Key 4" Target="OPT_DUO" Default="N" Mode="" Description="Container Variable: OPT_DUO" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
+  <Config Name="Key 5" Target="OPT_CAS" Default="N" Mode="" Description="Container Variable: OPT_CAS" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
   <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/ApacheGuacamole" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ApacheGuacamole</Config>
 </Container>
