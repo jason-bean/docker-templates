@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>ApacheGuacamole</Name>
+  <Name>ApacheGuacamoleNoMariaDB</Name>
   <Repository>jasonbean/guacamole:nomariadb</Repository>
   <Registry>https://registry.hub.docker.com/u/jasonbean/guacamole/</Registry>
   <Network>bridge</Network>
@@ -42,7 +42,7 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/ApacheGuacamole</HostDir>
+      <HostDir>/mnt/user/appdata/ApacheGuacamoleNoMariaDB</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
