@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>ApacheGuacamole</Name>
-  <Repository>jasonbean/guacamole</Repository>
+  <Repository>jasonbean/guacamole:nomariadb</Repository>
   <Registry>https://registry.hub.docker.com/u/jasonbean/guacamole/</Registry>
   <Network>bridge</Network>
   <MyIP/>
@@ -55,11 +55,6 @@
     </Variable>
     <Variable>
       <Value>N</Value>
-      <Name>OPT_MYSQL_EXTENSION</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>N</Value>
       <Name>OPT_SQLSERVER</Name>
       <Mode/>
     </Variable>
@@ -92,7 +87,6 @@
   <Labels/>
   <Config Name="Web Port" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="OPT_MYSQL" Target="OPT_MYSQL" Default="Y" Mode="" Description="Container Variable: OPT_MYSQL" Type="Variable" Display="always" Required="false" Mask="false">Y</Config>
-  <Config Name="OPT_MYSQL_EXTENSION" Target="OPT_MYSQL_EXTENSION" Default="N" Mode="" Description="Container Variable: OPT_MYSQL_EXTENSION" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
   <Config Name="OPT_SQLSERVER" Target="OPT_SQLSERVER" Default="N" Mode="" Description="Container Variable: OPT_SQLSERVER" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
   <Config Name="OPT_LDAP" Target="OPT_LDAP" Default="N" Mode="" Description="Container Variable: OPT_LDAP" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
   <Config Name="OPT_DUO" Target="OPT_DUO" Default="N" Mode="" Description="Container Variable: OPT_DUO" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
