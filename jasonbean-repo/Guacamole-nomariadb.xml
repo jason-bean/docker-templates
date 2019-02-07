@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>ApacheGuacamoleNoMariaDB</Name>
-  <Repository>jasonbean/guacamole:nomariadb</Repository>
+  <Repository>jasonbean/guacamole:latest-nomariadb</Repository>
   <Registry>https://registry.hub.docker.com/u/jasonbean/guacamole/</Registry>
   <Network>bridge</Network>
   <MyIP/>
