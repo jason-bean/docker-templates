@@ -95,5 +95,5 @@
   <Config Name="OPT_TOTP" Target="OPT_TOTP" Default="N" Mode="" Description="Container Variable: OPT_TOTP" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
   <Config Name="OPT_QUICKCONNECT" Target="OPT_QUICKCONNECT" Default="N" Mode="" Description="Container Variable: OPT_QUICKCONNECT" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
   <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/ApacheGuacamole" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ApacheGuacamole</Config>
-  <Date>2019-01-10</Date>
+  <Date>2020-02-23</Date>
 </Container>
