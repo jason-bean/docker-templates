@@ -116,14 +116,14 @@
     [ul]
       [li]Upgraded to Apache Guacamole 1.2.0.[/li]
       [li]Fixed problem with OpenID extension so that it would load before all other auth extensions.[/li]
-      [li]No database scheme changes.[/li]
+      [li]No database schema changes.[/li]
     [/ul]
 
     [h3]2/23/2020[/h3]
     [ul]
       [li]Upgraded to Apache Guacamole 1.1.0.[/li]
       [li]Changed to debian:stable-slim base container to shave off some size.[/li]
-      [li]No database scheme changes.[/li]
+      [li]No database schema changes.[/li]
     [/ul]
 
     [h3]1/10/2019[/h3]
