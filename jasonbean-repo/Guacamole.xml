@@ -111,4 +111,106 @@
   <Config Name="OPT_QUICKCONNECT" Target="OPT_QUICKCONNECT" Default="N" Mode="" Description="Container Variable: OPT_QUICKCONNECT" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
   <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/ApacheGuacamole" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ApacheGuacamole</Config>
   <Date>2020-07-05</Date>
+  <Changes>
+    [h3]7/5/2020[/h3]
+    [ul]
+      [li]Upgraded to Apache Guacamole 1.2.0.[/li]
+      [li]Fixed problem with OpenID extension so that it would load before all other auth extensions.[/li]
+      [li]No database scheme changes.[/li]
+    [/ul]
+
+    [h3]2/23/2020[/h3]
+    [ul]
+      [li]Upgraded to Apache Guacamole 1.1.0.[/li]
+      [li]Changed to debian:stable-slim base container to shave off some size.[/li]
+      [li]No database scheme changes.[/li]
+    [/ul]
+
+    [h3]1/10/2019[/h3]
+    [ul]
+      [li]Upgraded to Apache Guacamole 1.0.0.[/li]
+      [li]BIG UPGRADE!
+        [ul]
+          [li]Thanks to the Guacamole team my build process has been greatly improved.[/li]
+          [li]Now uses the Debian base container just like the guacd Docker container from Apache.[/li]
+          [li]Retooled entire run process to use tini/supervisor to manage services.[/li]
+          [li]Added version that comes without MariaDB so that container size is halved if you have an external database source or use the default authentication.[/li]
+        [/ul]
+      [/li]
+    [/ul]
+
+    [h3]9/24/2018[/h3]
+    [ul]
+      [li]Modified the firstrun.sh script so that the MySQL schema files are copied to /config when OPT_MYSQL is set "Y" in case someone wants to use an external MySQL or MariaDB database.[/li]
+    [/ul]
+
+    [h3]8/18/2018[/h3]
+    [ul]
+      [li]tyler43636 submitted pull request to add the tzdata package to correct for the RTC being set to the local time rather than UTC.[/li]
+    [/ul]
+
+    [h3]6/12/2018[/h3]
+    [ul]
+      [li]Modified unRAID template to make this a privileged container so that Tomcat will run correctly.[/li]
+      [li]Added more logging messages and ensure that the database doesn't get created when the guacamole.properties file doesn't exist.[/li]
+      [li]Modified so that all Tomcat logs get placed in guacamole/log directory.[/li]
+    [/ul]
+
+    [h3]6/11/2018[/h3]
+    [ul]
+      [li]Fixed creation of /config/guacamole/log folder so that it will exist when Tomcat is started.[/li]
+      [li]Corrected a regression error introduced when switching to a multi-stage build.[/li]
+    [/ul]
+
+    [h3]6/8/2018[/h3]
+    [ul]
+      [li]Changed location of Tomcat catalina.out log file /config/guacamole/log to improve troubleshooting.[/li]
+      [li]Attempt to mitigate a file permissions problem by always setting 755 permissions on container start.[/li]
+    [/ul]
+
+    [h3]6/7/2018[/h3]
+    [ul]
+      [li]Added GhostScript to allow remote printing.[/li]
+    [/ul]
+
+    [h3]1/24/2018[/h3]
+    [ul]
+      [li]Upgraded to Apache Guacamole 0.9.14.[/li]
+      [li]Upgraded MySQL Java Connector to 5.1.45[/li]
+      [li]Added Microsoft SQL Server JDBC 6.2.2 driver.[/li]
+      [li]Converted to multi-stage Docker to reduce size.[/li]
+      [li]Ability to downgrade using a tag (e.g. jasonbean/guacamole:0.9.13)[/li]
+    [/ul]
+
+    [h3]12/16/2017[/h3]
+    [ul]
+      [li]Added Powerline fonts to support Oh My Zsh agnoster theme.[/li]
+    [/ul]
+
+    [h3]8/7/2017[/h3]
+    [ul]
+      [li]Upgraded to phusion/baseimage 0.9.22.[/li]
+      [li]Upgraded to MariaDB 10.2.[/li]
+      [li]Upgraded to Tomcat 8.[/li]
+    [/ul]
+
+    [h3]8/4/2017[/h3]
+    [ul]
+      [li]Added all optional libraries for guacd to enable all features.[/li]
+      [li]Got rid of log warning by moving the offending symbolic link creation from firstrun.sh to Dockerfile.[/li]
+    [/ul]
+
+    [h3]8/2/2017[/h3]
+    [ul]
+      [li]Upgraded to Apache Guacamole 0.9.13-incubating.[/li]
+      [li]Upgraded MySQL Java Connector to 5.1.43.[/li]
+      [li]Database schema upgrades to 0.9.13.[/li]
+    [/ul]
+
+    [h3]4/4/2017[/h3]
+    [ul]
+      [li]Upgraded to Apache Guacamole 0.9.12-incubating.[/li]
+      [li]Upgraded MySQL Java Connector to 5.1.41.[/li]
+    [/ul]
+  </Changes>
 </Container>
