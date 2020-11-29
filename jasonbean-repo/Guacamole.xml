@@ -112,6 +112,11 @@
   <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/ApacheGuacamole" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ApacheGuacamole</Config>
   <Date>2020-07-05</Date>
   <Changes>
+    [h3]11/29/2020[/h3]
+    [ul]
+      [li]Added -s argument to tini to make sure it can subreap if not PID 1.[/li]
+    [/ul]
+
     [h3]7/5/2020[/h3]
     [ul]
       [li]Upgraded to Apache Guacamole 1.2.0.[/li]
