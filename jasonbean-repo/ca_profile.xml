@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maintainer>
+  <Icon>https://raw.githubusercontent.com/jason-bean/docker-templates/master/jasonbean-repo/me.jpeg</Icon>
+  <Profile>
+    I create Docker containers that are of interest to me that I hope others find also find useful.
+  </Profile>
+  <DonateLink>https://paypal.me/jasonsbean/0usd</DonateLink>
+  <DonateText>If you like my work please consider Donating.</DonateText>
+</Maintainer>
