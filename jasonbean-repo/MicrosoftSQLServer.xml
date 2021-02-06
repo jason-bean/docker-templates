@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>MicrosoftSQLServer</Name>
+  <Repository>mcr.microsoft.com/mssql/server:2019-latest</Repository>
+  <Registry>https://hub.docker.com/_/microsoft-mssql-server</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category>Network:Management Network:Other</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/jason-bean/docker-templates/master/jasonbean-repo/MicrosoftSQLServer.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1612627926</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1433</HostPort>
+        <ContainerPort>1433</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/MSSQLServer</HostDir>
+      <ContainerDir>/var/opt/mssql</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>Y</Value>
+      <Name>ACCEPT_EULA</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>SA_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Express</Value>
+      <Name>MSSQL_PID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="SQL Server Port" Target="1433" Default="1433" Mode="tcp" Description="Container Port: 1433" Type="Port" Display="always" Required="true" Mask="false">1433</Config>
+  <Config Name="ACCEPT_EULA" Target="ACCEPT_EULA" Default="N" Mode="" Description="Container Variable: ACCEPT_EULA" Type="Variable" Display="always" Required="true" Mask="false">Y</Config>
+  <Config Name="SA_PASSWORD" Target="SA_PASSWORD" Default="" Mode="" Description="Container Variable: SA_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="MSSQL_PID" Target="MSSQL_PID" Default="Express" Mode="" Description="Container Variable: MSSQL_PID" Type="Variable" Display="always" Required="true" Mask="false">Express</Config>
+  <Config Name="appdata" Target="/var/opt/mssql" Default="/mnt/user/MSSQLServer" Mode="rw" Description="Container Path: /var/opt/mssql" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/MSSQLServer</Config>
+</Container>
