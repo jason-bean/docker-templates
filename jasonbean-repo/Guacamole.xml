@@ -124,8 +124,13 @@
   <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/ApacheGuacamole" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ApacheGuacamole</Config>
   <Config Name="PUID" Target="PUID" Default="90" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
-  <Date>2021-05-30</Date>
+  <Date>2022-01-12</Date>
   <Changes>
+    [h3]1/12/2022[/h3]
+    [ul]
+      [li]Upgraded to Apache Guacamole 1.4.0.[/li]
+      [li]Changed to install latest version of Tomcat directly from Apache since the Debian Buster repository contains an old version.[/li]
+    [/ul]
     [h3]5/30/2021[/h3]
     [ul]
       [li]Merged changes from Sean to add logrotate to prevent Catalina log from growing forever.[/li]
