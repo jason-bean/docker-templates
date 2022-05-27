@@ -7,9 +7,12 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
-  <Project/>
-  <Overview/>
+  <Support>https://github.com/Microsoft/mssql-docker</Support>
+  <Project>https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview?view=sql-server-ver16</Project>
+  <Overview>
+    Microsoft's official SQL Server Docker container.[br][br]
+    You must accept EULA with "Y" as the parameter value.
+  </Overview>
   <Category>Network:Management Network:Other</Category>
   <WebUI/>
   <TemplateURL/>
@@ -20,7 +23,10 @@
   <DateInstalled>1612627926</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description/>
+  <Description>
+    Microsoft's official SQL Server Docker container.[br][br]
+    You must accept EULA with "Y" as the parameter value.
+  </Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -40,7 +46,7 @@
   </Data>
   <Environment>
     <Variable>
-      <Value>Y</Value>
+      <Value>N</Value>
       <Name>ACCEPT_EULA</Name>
       <Mode/>
     </Variable>
