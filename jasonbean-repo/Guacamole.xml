@@ -85,6 +85,11 @@
     </Variable>
     <Variable>
       <Value>N</Value>
+      <Name>OPT_OPENID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>N</Value>
       <Name>OPT_QUICKCONNECT</Name>
       <Mode/>
     </Variable>
