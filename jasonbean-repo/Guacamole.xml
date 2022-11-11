@@ -129,8 +129,13 @@
   <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/ApacheGuacamole" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ApacheGuacamole</Config>
   <Config Name="PUID" Target="PUID" Default="90" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
-  <Date>2022-01-12</Date>
+  <Date>2022-11-11</Date>
   <Changes>
+    [h3]11/11/2022[/h3]
+    [ul]
+      [li]Updated MariaDB install process.[/li]
+      [li]Cleaned up code.[/li]
+      [li]New build to update Tomcat[/li]
     [h3]1/12/2022[/h3]
     [ul]
       [li]Upgraded to Apache Guacamole 1.4.0.[/li]
