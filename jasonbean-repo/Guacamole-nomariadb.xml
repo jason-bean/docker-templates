@@ -125,8 +125,12 @@
   <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/ApacheGuacamole" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ApacheGuacamole</Config>
   <Config Name="PUID" Target="PUID" Default="90" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
-  <Date>2022-11-11</Date>
+  <Date>2023-3-18</Date>
   <Changes>
+    [h3]3/18/2023[/h3]
+    [ul]
+      [li]Correct how mysqld loads so that it shuts down correctly.[/li]
+    [/ul]
     [h3]11/11/2022[/h3]
     [ul]
       [li]Cleaned up code.[/li]
