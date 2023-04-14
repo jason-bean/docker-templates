@@ -5,7 +5,7 @@
   <Registry>https://registry.hub.docker.com/u/jasonbean/guacamole/</Registry>
   <Network>bridge</Network>
   <MyIP/>
-  <Privileged>true</Privileged>
+  <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/54855-support-jasonbean-apache-guacamole/</Support>
   <Project>https://guacamole.apache.org/</Project>
   <Overview>&#xD;
@@ -130,8 +130,13 @@
   <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/ApacheGuacamole" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ApacheGuacamole</Config>
   <Config Name="PUID" Target="PUID" Default="90" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
-  <Date>2023-3-24</Date>
+  <Date>2023-4-14</Date>
   <Changes>
+    [h3]4/14/2023[/h3]
+    [ul]
+      [li]Upgraded to Apache Guacamole 1.5.1.[/li]
+      [li]Removed privileged from template.[/li]
+    [/ul]
     [h3]3/24/2023[/h3]
     [ul]
       [li]Added missing guacd dependency.[/li]
